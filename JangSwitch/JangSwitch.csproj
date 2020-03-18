@@ -73,11 +73,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Function.cs">
+    <Compile Include="Fire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Function.Designer.cs">
-      <DependentUpon>Function.cs</DependentUpon>
+    <Compile Include="Fire.Designer.cs">
+      <DependentUpon>Fire.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,8 +104,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Function.resx">
-      <DependentUpon>Function.cs</DependentUpon>
+    <EmbeddedResource Include="Fire.resx">
+      <DependentUpon>Fire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,10 +113,43 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn_start.jpg" />
+    <None Include="Resources\btn_stop.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn_stop.png" />
+    <None Include="Resources\btn_start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sw_bgn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\led_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\led_on1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

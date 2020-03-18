@@ -27,7 +27,7 @@
 *.lib
 
 # Executables
-*.exe
+#*.exe
 *.out
 *.app
 
@@ -63,7 +63,7 @@
 *.dylib
 
 # Executables
-*.exe
+#*.exe
 *.out
 *.app
 *.i*86
@@ -85,3 +85,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 .vs/
+
+**/obj

@@ -16,7 +16,7 @@ namespace JangSwitch
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Function(args));
+            Application.Run(new Fire(args));
         }
     }
 }

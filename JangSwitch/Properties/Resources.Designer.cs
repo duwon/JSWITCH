@@ -63,6 +63,16 @@ namespace JangSwitch.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_close {
+            get {
+                object obj = ResourceManager.GetObject("btn_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_default {
             get {
                 object obj = ResourceManager.GetObject("btn_default", resourceCulture);
@@ -113,6 +123,26 @@ namespace JangSwitch.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap fire_background {
+            get {
+                object obj = ResourceManager.GetObject("fire_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap function_background {
+            get {
+                object obj = ResourceManager.GetObject("function_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap key_1 {
             get {
                 object obj = ResourceManager.GetObject("key_1", resourceCulture);
@@ -156,16 +186,6 @@ namespace JangSwitch.Properties {
         internal static System.Drawing.Bitmap sw_bgn {
             get {
                 object obj = ResourceManager.GetObject("sw_bgn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap switch_background {
-            get {
-                object obj = ResourceManager.GetObject("switch_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

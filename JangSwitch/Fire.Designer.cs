@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fire));
             this.textBox_Debug = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button_LED6 = new System.Windows.Forms.Button();
+            this.button_LED7 = new System.Windows.Forms.Button();
+            this.button_LED4 = new System.Windows.Forms.Button();
+            this.button_LED3 = new System.Windows.Forms.Button();
+            this.button_LED2 = new System.Windows.Forms.Button();
+            this.button_LED1 = new System.Windows.Forms.Button();
+            this.button_LED5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -47,182 +47,183 @@
             this.button_key2 = new System.Windows.Forms.Button();
             this.button_key3 = new System.Windows.Forms.Button();
             this.button_comLED = new System.Windows.Forms.Button();
+            this.button_close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_Debug
             // 
+            this.textBox_Debug.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBox_Debug.Location = new System.Drawing.Point(0, 696);
             this.textBox_Debug.Multiline = true;
             this.textBox_Debug.Name = "textBox_Debug";
             this.textBox_Debug.Size = new System.Drawing.Size(160, 245);
             this.textBox_Debug.TabIndex = 1;
             // 
-            // button3
+            // button_LED6
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.CausesValidation = false;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("맑은 고딕", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = global::JangSwitch.Properties.Resources.btn_yellow;
-            this.button3.Location = new System.Drawing.Point(86, 284);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(60, 60);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "MAS\r\n능동발사";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_LED6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_LED6.BackgroundImage")));
+            this.button_LED6.CausesValidation = false;
+            this.button_LED6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED6.FlatAppearance.BorderSize = 0;
+            this.button_LED6.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LED6.Font = new System.Drawing.Font("맑은 고딕", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_LED6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_LED6.Image = global::JangSwitch.Properties.Resources.btn_yellow;
+            this.button_LED6.Location = new System.Drawing.Point(86, 284);
+            this.button_LED6.Margin = new System.Windows.Forms.Padding(0);
+            this.button_LED6.Name = "button_LED6";
+            this.button_LED6.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.button_LED6.Size = new System.Drawing.Size(60, 60);
+            this.button_LED6.TabIndex = 3;
+            this.button_LED6.Text = "MAS\r\n능동발사";
+            this.button_LED6.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // button_LED7
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.CausesValidation = false;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::JangSwitch.Properties.Resources.btn_orange;
-            this.button2.Location = new System.Drawing.Point(20, 283);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(60, 60);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "AOS\r\n능동발사";
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseMnemonic = false;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_LED7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_LED7.BackgroundImage")));
+            this.button_LED7.CausesValidation = false;
+            this.button_LED7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_LED7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED7.FlatAppearance.BorderSize = 0;
+            this.button_LED7.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LED7.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_LED7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_LED7.Image = global::JangSwitch.Properties.Resources.btn_orange;
+            this.button_LED7.Location = new System.Drawing.Point(20, 283);
+            this.button_LED7.Margin = new System.Windows.Forms.Padding(0);
+            this.button_LED7.Name = "button_LED7";
+            this.button_LED7.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.button_LED7.Size = new System.Drawing.Size(60, 60);
+            this.button_LED7.TabIndex = 2;
+            this.button_LED7.Text = "AOS\r\n능동발사";
+            this.button_LED7.UseCompatibleTextRendering = true;
+            this.button_LED7.UseMnemonic = false;
+            this.button_LED7.UseVisualStyleBackColor = false;
+            this.button_LED7.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // button_LED4
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.CausesValidation = false;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(86, 410);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(60, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "발사\r\n명령";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button1_Click);
-            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button1_Click);
+            this.button_LED4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_LED4.BackgroundImage")));
+            this.button_LED4.CausesValidation = false;
+            this.button_LED4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED4.FlatAppearance.BorderSize = 0;
+            this.button_LED4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LED4.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_LED4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_LED4.Image = ((System.Drawing.Image)(resources.GetObject("button_LED4.Image")));
+            this.button_LED4.Location = new System.Drawing.Point(86, 410);
+            this.button_LED4.Margin = new System.Windows.Forms.Padding(0);
+            this.button_LED4.Name = "button_LED4";
+            this.button_LED4.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.button_LED4.Size = new System.Drawing.Size(60, 60);
+            this.button_LED4.TabIndex = 0;
+            this.button_LED4.Text = "발사\r\n명령";
+            this.button_LED4.UseVisualStyleBackColor = false;
+            this.button_LED4.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button4
+            // button_LED3
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.CausesValidation = false;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = global::JangSwitch.Properties.Resources.btn_default;
-            this.button4.Location = new System.Drawing.Point(86, 473);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(60, 60);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "수평발사\r\n허가";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_LED3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_LED3.BackgroundImage")));
+            this.button_LED3.CausesValidation = false;
+            this.button_LED3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED3.FlatAppearance.BorderSize = 0;
+            this.button_LED3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LED3.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_LED3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_LED3.Image = global::JangSwitch.Properties.Resources.btn_default;
+            this.button_LED3.Location = new System.Drawing.Point(86, 473);
+            this.button_LED3.Margin = new System.Windows.Forms.Padding(0);
+            this.button_LED3.Name = "button_LED3";
+            this.button_LED3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.button_LED3.Size = new System.Drawing.Size(60, 60);
+            this.button_LED3.TabIndex = 4;
+            this.button_LED3.Text = "수평발사\r\n허가";
+            this.button_LED3.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button_LED2
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.CausesValidation = false;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = global::JangSwitch.Properties.Resources.btn_default;
-            this.button5.Location = new System.Drawing.Point(86, 536);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(60, 60);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "수중발사\r\n허가";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button_LED2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_LED2.BackgroundImage")));
+            this.button_LED2.CausesValidation = false;
+            this.button_LED2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED2.FlatAppearance.BorderSize = 0;
+            this.button_LED2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LED2.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_LED2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_LED2.Image = global::JangSwitch.Properties.Resources.btn_default;
+            this.button_LED2.Location = new System.Drawing.Point(86, 536);
+            this.button_LED2.Margin = new System.Windows.Forms.Padding(0);
+            this.button_LED2.Name = "button_LED2";
+            this.button_LED2.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.button_LED2.Size = new System.Drawing.Size(60, 60);
+            this.button_LED2.TabIndex = 5;
+            this.button_LED2.Text = "수중발사\r\n허가";
+            this.button_LED2.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // button_LED1
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.CausesValidation = false;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = global::JangSwitch.Properties.Resources.btn_default;
-            this.button6.Location = new System.Drawing.Point(86, 599);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(60, 60);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "기만기\r\n허가";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button_LED1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_LED1.BackgroundImage")));
+            this.button_LED1.CausesValidation = false;
+            this.button_LED1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED1.FlatAppearance.BorderSize = 0;
+            this.button_LED1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LED1.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_LED1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_LED1.Image = global::JangSwitch.Properties.Resources.btn_default;
+            this.button_LED1.Location = new System.Drawing.Point(86, 599);
+            this.button_LED1.Margin = new System.Windows.Forms.Padding(0);
+            this.button_LED1.Name = "button_LED1";
+            this.button_LED1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.button_LED1.Size = new System.Drawing.Size(60, 60);
+            this.button_LED1.TabIndex = 6;
+            this.button_LED1.Text = "기만기\r\n허가";
+            this.button_LED1.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // button_LED5
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.CausesValidation = false;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(20, 410);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(60, 60);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "발사\r\n인가";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button_LED5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_LED5.BackgroundImage")));
+            this.button_LED5.CausesValidation = false;
+            this.button_LED5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED5.FlatAppearance.BorderSize = 0;
+            this.button_LED5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_LED5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LED5.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_LED5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_LED5.Image = ((System.Drawing.Image)(resources.GetObject("button_LED5.Image")));
+            this.button_LED5.Location = new System.Drawing.Point(20, 410);
+            this.button_LED5.Margin = new System.Windows.Forms.Padding(0);
+            this.button_LED5.Name = "button_LED5";
+            this.button_LED5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.button_LED5.Size = new System.Drawing.Size(60, 60);
+            this.button_LED5.TabIndex = 7;
+            this.button_LED5.Text = "발사\r\n인가";
+            this.button_LED5.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -409,14 +410,36 @@
             this.button_comLED.UseVisualStyleBackColor = false;
             this.button_comLED.Click += new System.EventHandler(this.button_comLED_Click);
             // 
+            // button_close
+            // 
+            this.button_close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_close.CausesValidation = false;
+            this.button_close.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_close.FlatAppearance.BorderSize = 0;
+            this.button_close.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_close.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_close.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_close.Image = global::JangSwitch.Properties.Resources.btn_close;
+            this.button_close.Location = new System.Drawing.Point(137, 2);
+            this.button_close.Margin = new System.Windows.Forms.Padding(0);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(17, 17);
+            this.button_close.TabIndex = 16;
+            this.button_close.UseVisualStyleBackColor = false;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
+            // 
             // Fire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::JangSwitch.Properties.Resources.switch_background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(160, 941);
             this.ControlBox = false;
+            this.Controls.Add(this.button_close);
             this.Controls.Add(this.button_comLED);
             this.Controls.Add(this.button_key3);
             this.Controls.Add(this.button_key2);
@@ -425,17 +448,17 @@
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_LED5);
+            this.Controls.Add(this.button_LED1);
+            this.Controls.Add(this.button_LED2);
+            this.Controls.Add(this.button_LED3);
+            this.Controls.Add(this.button_LED6);
+            this.Controls.Add(this.button_LED7);
             this.Controls.Add(this.textBox_Debug);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_LED4);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(3680, 100);
+            this.Location = new System.Drawing.Point(1760, 100);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(160, 1200);
             this.Name = "Fire";
@@ -449,14 +472,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_LED4;
         private System.Windows.Forms.TextBox textBox_Debug;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button_LED7;
+        private System.Windows.Forms.Button button_LED6;
+        private System.Windows.Forms.Button button_LED3;
+        private System.Windows.Forms.Button button_LED2;
+        private System.Windows.Forms.Button button_LED1;
+        private System.Windows.Forms.Button button_LED5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
@@ -466,5 +489,6 @@
         private System.Windows.Forms.Button button_key2;
         private System.Windows.Forms.Button button_key3;
         private System.Windows.Forms.Button button_comLED;
+        private System.Windows.Forms.Button button_close;
     }
 }

@@ -133,11 +133,17 @@
   <data name="btn_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="switch_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\switch_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="function_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\function_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="key_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -100,6 +100,21 @@ namespace JangSwitch
             textBox_Debug.AppendText(message + "\r\n");
         }
 
+        private void sendPacket(byte[] txData)
+        {
+            txData[txData.Length - 2] = Cal_CRC(txData);
+            
+            try
+            {
+                serialPort.Write(txData, 0, txData.Length);
+                PrintDebug(BitConverter.ToString(txData).Replace("-", " ") + " ");
+            }
+            catch
+            {
+            }
+
+        }
+
         Message RxMessage = new Message();
         System.Collections.Concurrent.ConcurrentQueue<byte> rxBuffer = new System.Collections.Concurrent.ConcurrentQueue<byte>();
         
@@ -339,6 +354,27 @@ namespace JangSwitch
             }
         }
 
+        byte[] 발사키누름상태 = new byte[7];
+        private void btn_switch_click(object sender, EventArgs e)
+        {
+            Button[] btn_led = { button_LED1, button_LED2, button_LED3, button_LED4, button_LED5, button_LED6, button_LED7 };
+
+            for (int i = 0; i < btn_led.Length; i++)
+            {
+                if (sender.Equals(btn_led[i]))
+                {
+                    발사키누름상태[i] ^= 0x01;
+
+                    발사LED상태[i + 1] <<= 1;
+                    if((발사LED상태[i+1] & 0xF) == 0)
+                    {
+                        발사LED상태[i + 1] = 1;
+                    }
+                }
+            }
+            ControlLED(); /* 테스트용*/
+        }
+
         private void button_comLED_Click(object sender, EventArgs e)
         {
             if (serialPort.IsOpen)
@@ -376,5 +412,7 @@ namespace JangSwitch
         {
             Properties.Settings.Default.Save();
         }
+
+
     }
 }

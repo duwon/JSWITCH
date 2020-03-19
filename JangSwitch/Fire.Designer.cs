@@ -81,6 +81,7 @@
             this.button_LED6.TabIndex = 3;
             this.button_LED6.Text = "MAS\r\n능동발사";
             this.button_LED6.UseVisualStyleBackColor = false;
+            this.button_LED6.Click += new System.EventHandler(this.btn_switch_click);
             // 
             // button_LED7
             // 
@@ -107,7 +108,7 @@
             this.button_LED7.UseCompatibleTextRendering = true;
             this.button_LED7.UseMnemonic = false;
             this.button_LED7.UseVisualStyleBackColor = false;
-            this.button_LED7.Click += new System.EventHandler(this.button2_Click);
+            this.button_LED7.Click += new System.EventHandler(this.btn_switch_click);
             // 
             // button_LED4
             // 
@@ -131,7 +132,7 @@
             this.button_LED4.TabIndex = 0;
             this.button_LED4.Text = "발사\r\n명령";
             this.button_LED4.UseVisualStyleBackColor = false;
-            this.button_LED4.Click += new System.EventHandler(this.Button1_Click);
+            this.button_LED4.Click += new System.EventHandler(this.btn_switch_click);
             // 
             // button_LED3
             // 
@@ -155,6 +156,7 @@
             this.button_LED3.TabIndex = 4;
             this.button_LED3.Text = "수평발사\r\n허가";
             this.button_LED3.UseVisualStyleBackColor = false;
+            this.button_LED3.Click += new System.EventHandler(this.btn_switch_click);
             // 
             // button_LED2
             // 
@@ -178,6 +180,7 @@
             this.button_LED2.TabIndex = 5;
             this.button_LED2.Text = "수중발사\r\n허가";
             this.button_LED2.UseVisualStyleBackColor = false;
+            this.button_LED2.Click += new System.EventHandler(this.btn_switch_click);
             // 
             // button_LED1
             // 
@@ -224,6 +227,7 @@
             this.button_LED5.TabIndex = 7;
             this.button_LED5.Text = "발사\r\n인가";
             this.button_LED5.UseVisualStyleBackColor = false;
+            this.button_LED5.Click += new System.EventHandler(this.btn_switch_click);
             // 
             // button8
             // 

@@ -58,7 +58,7 @@ namespace JangSwitch
                 // serialPort가 null 일때만 새로운 SerialPort Open
                 if (!serialPort.IsOpen)
                 {
-                    serialPort.PortName = "COM3";
+                    serialPort.PortName = Properties.Settings.Default.PortName;
                     serialPort.BaudRate = 115200;
 
                     serialPort.RtsEnable = true;
@@ -344,7 +344,7 @@ namespace JangSwitch
             if (serialPort.IsOpen)
                 CloseSerialPort();
             else
-                OpenSerialPort();
+                OpenSerialPort();            
         }
 
         bool button_state = true;
@@ -370,6 +370,11 @@ namespace JangSwitch
         private void button_close_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void Fire_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.Save();
         }
     }
 }

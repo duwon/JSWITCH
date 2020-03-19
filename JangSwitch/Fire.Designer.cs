@@ -464,6 +464,7 @@
             this.Name = "Fire";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Function";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Fire_FormClosing);
             this.Load += new System.EventHandler(this.Fire_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

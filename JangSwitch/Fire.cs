@@ -31,14 +31,15 @@ namespace JangSwitch
 
         }
 
-        bool[] 발사LED점멸상태 = new bool[8];
+        /* bool[] 발사LED점멸상태 = new bool[8]; */
+        bool 발사LED점멸;
         private void timer_1s_handler(object sender, EventArgs e)
         {
             Button[] btn_led = { button9, button_LED1, button_LED2, button_LED3, button_LED4, button_LED5, button_LED6, button_LED7 };
-            for (int i = 0; i < 8; i++)
+#if fale
+            for (int i = 0; i < 8; i++) /* 각 LED 개별 점멸
             {
-                //발사LED상태[i] = 0x01;
-                if ((발사LED상태[i] == 0x01) && (발사LED점멸상태[i] == true))
+                if ((발사LED상태[i] == 0x01) && (발사LED점멸상태[i] == true)) /* 해당 LED상태가 점멸이고 소등상태이면 */
                 {
                     btn_led[i].Image = JangSwitch.Properties.Resources.btn_yellow;
                     발사LED점멸상태[i] = false;
@@ -48,7 +49,25 @@ namespace JangSwitch
                     btn_led[i].Image = JangSwitch.Properties.Resources.btn_default;
                     발사LED점멸상태[i] = true;
                 }
+                else if (발사LED상태[i] == 0x01) /* 해당 LED상태가 점멸이 아니면 */
+                {
+                    발사LED점멸상태[i] = true;
+                }
             }
+#else
+            for (int i = 0; i < 8; i++)
+            {
+                if ((발사LED상태[i] == 0x01) && (발사LED점멸 == true))
+                {
+                    btn_led[i].Image = JangSwitch.Properties.Resources.btn_yellow;
+                }
+                else if ((발사LED상태[i] == 0x01) && (발사LED점멸 == false))
+                {
+                    btn_led[i].Image = JangSwitch.Properties.Resources.btn_default;
+                }
+            }
+            발사LED점멸 ^= true;
+#endif
         }
 
         private void OpenSerialPort()
@@ -260,7 +279,7 @@ namespace JangSwitch
                         }
                     case (byte)Stage.PARSING:
                         {
-                            //ParsingMessage();
+                            ParsingMessage();
                             RxMessage.nextStage = (byte)Stage.START;
                             break;
                         }
@@ -287,6 +306,36 @@ namespace JangSwitch
             calChecksum = (byte)(~calChecksum + 0x01);            /* 체크섬 계산식 : ~(Lenghth + Transmit ID + Receive ID + Command + Data) + 1 */
 
             return calChecksum;
+        }
+
+        private void ParsingMessage()
+        {
+            switch (RxMessage.type)
+            {
+                case 0x03: /* 상세 정보 요청 */
+                    {
+                        sendFireSwitchStatus();
+                        break;
+                    }
+                case 0x53: /* 발사스위치단 LED 제어 요청 */
+                    {
+                        Array.Copy(RxMessage.data, 8, 발사스위치단LED제어값, 0, 4);
+                        SaveLEDStatus(발사스위치단LED제어값);
+                        break;
+                    }
+                default :
+                    {
+                        break;
+                    }
+            }
+        }
+        byte[] 발사스위치단LED제어값 = new byte[4];
+        byte[] 발사스위치단상태정보 = new byte[3];
+        private void sendFireSwitchStatus()
+        {
+            byte[] txStatusPacket = { (byte)Packet.STX, (byte)Packet.STX, (byte)Packet.STX, (byte)Packet.STX, 37, RxMessage.destID, RxMessage.srcID, 0x13, 220, 0xF0, 0x55, 0xE8, 0x03, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x70, 0x17, 0, 0, 0, 0, 0, (byte)Packet.CHECKSUM, (byte)Packet.ETX };
+            Array.Copy(발사스위치단상태정보, 0, txStatusPacket, txStatusPacket.Length - 5,3);
+            sendPacket(txStatusPacket);
         }
 
         byte[] 발사LED상태 = new byte[8];
@@ -354,7 +403,7 @@ namespace JangSwitch
             }
         }
 
-        byte[] 발사키누름상태 = new byte[7];
+        byte[] 발사키누름상태 = new byte[7]; /* 1 점멸, 2 밝은 점등, 4 어두운 점등, 8 소등 */
         private void btn_switch_click(object sender, EventArgs e)
         {
             Button[] btn_led = { button_LED1, button_LED2, button_LED3, button_LED4, button_LED5, button_LED6, button_LED7 };
@@ -366,7 +415,7 @@ namespace JangSwitch
                     발사키누름상태[i] ^= 0x01;
 
                     발사LED상태[i + 1] <<= 1;
-                    if((발사LED상태[i+1] & 0xF) == 0)
+                    if((발사LED상태[i + 1] & 0xF) == 0)
                     {
                         발사LED상태[i + 1] = 1;
                     }
@@ -381,26 +430,6 @@ namespace JangSwitch
                 CloseSerialPort();
             else
                 OpenSerialPort();            
-        }
-
-        bool button_state = true;
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            if (button_state == true)
-            {
-                button_LED4.Image = Properties.Resources.btn_orange;
-                button_state = false;
-            }
-            else
-            {
-                button_LED4.Image = Properties.Resources.btn_yellow;
-                button_state = true;
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button_close_Click(object sender, EventArgs e)

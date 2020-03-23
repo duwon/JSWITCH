@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function.Designer.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
     <Compile Include="Message.cs" />
     <Compile Include="Fire.cs">
       <SubType>Form</SubType>
@@ -123,6 +129,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Function.resx">
+      <DependentUpon>Function.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fire.resx">
       <DependentUpon>Fire.cs</DependentUpon>
     </EmbeddedResource>

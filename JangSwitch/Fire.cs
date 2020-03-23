@@ -442,6 +442,9 @@ namespace JangSwitch
             Properties.Settings.Default.Save();
         }
 
-
+        private void Button_closeDebugBox_Click(object sender, EventArgs e)
+        {
+            textBox_Debug.Dispose();
+        }
     }
 }

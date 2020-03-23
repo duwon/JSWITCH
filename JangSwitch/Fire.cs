@@ -355,6 +355,15 @@ namespace JangSwitch
             ControlLED(); /* LED 갱신 제어 */
         }
 
+        private void sendFireSwitchKeyPressed()
+        {
+            byte[] txKeyPacket = { (byte)Packet.STX, (byte)Packet.STX, (byte)Packet.STX, (byte)Packet.STX, 13, RxMessage.destID, RxMessage.srcID, 0x15, 0, 0, 0, (byte)Packet.CHECKSUM, (byte)Packet.ETX };
+            txKeyPacket[8] = (byte)(발사버튼누름상태 >> 16);
+            txKeyPacket[9] = (byte)(발사버튼누름상태 >> 8);
+            txKeyPacket[10] = (byte)(발사버튼누름상태);
+            sendPacket(txKeyPacket);
+        }
+
         private void ControlLED()
         {
             Button[] btn_led = { button9, button_LED1, button_LED2, button_LED3, button_LED4, button_LED5, button_LED6, button_LED7 };
@@ -403,16 +412,19 @@ namespace JangSwitch
             }
         }
 
-        byte[] 발사키누름상태 = new byte[7]; /* 1 점멸, 2 밝은 점등, 4 어두운 점등, 8 소등 */
+        byte[] 발사키누름상태테스트용 = new byte[7]; /* 1 점멸, 2 밝은 점등, 4 어두운 점등, 8 소등 */
+        uint 발사버튼누름상태 = 0;
         private void btn_switch_click(object sender, EventArgs e)
         {
             Button[] btn_led = { button_LED1, button_LED2, button_LED3, button_LED4, button_LED5, button_LED6, button_LED7 };
-
+            byte[] switchIndex = { 3, 4, 5, 8, 11, 20, 23};
+            
+            /* 테스트용 */
             for (int i = 0; i < btn_led.Length; i++)
             {
                 if (sender.Equals(btn_led[i]))
                 {
-                    발사키누름상태[i] ^= 0x01;
+                    발사키누름상태테스트용[i] ^= 0x01;
 
                     발사LED상태[i + 1] <<= 1;
                     if((발사LED상태[i + 1] & 0xF) == 0)
@@ -422,6 +434,24 @@ namespace JangSwitch
                 }
             }
             ControlLED(); /* 테스트용*/
+
+            for (int i = 0; i < btn_led.Length; i++)
+            {
+                if (sender.Equals(btn_led[i]))
+                {
+                    if (btn_led[i].Font.Bold == true) /* 폰트스타일이 Bold이면(키가 누름상태이면) */
+                    {
+                        btn_led[i].Font = new Font(btn_led[i].Font, System.Drawing.FontStyle.Regular);
+                        발사버튼누름상태 |= (uint)(1 << switchIndex[i]);
+                    }
+                    else
+                    {
+                        btn_led[i].Font = new Font(btn_led[i].Font, System.Drawing.FontStyle.Bold);
+                        발사버튼누름상태 ^= (uint)(1 << switchIndex[i]);
+                    }
+                }
+            }
+            sendFireSwitchKeyPressed(); /* 메시지 전송 */
         }
 
         private void button_comLED_Click(object sender, EventArgs e)

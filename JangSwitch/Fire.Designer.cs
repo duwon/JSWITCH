@@ -226,6 +226,7 @@
             this.button_LED4.UseCompatibleTextRendering = true;
             this.button_LED4.UseVisualStyleBackColor = false;
             this.button_LED4.Click += new System.EventHandler(this.btn_switch_click);
+            this.button_LED4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_switch_click);
             // 
             // button_key3
             // 
@@ -275,6 +276,7 @@
             this.button_LED7.UseCompatibleTextRendering = true;
             this.button_LED7.UseVisualStyleBackColor = false;
             this.button_LED7.Click += new System.EventHandler(this.btn_switch_click);
+            this.button_LED7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_switch_click);
             // 
             // button_key2
             // 
@@ -323,6 +325,7 @@
             this.button_LED6.UseCompatibleTextRendering = true;
             this.button_LED6.UseVisualStyleBackColor = false;
             this.button_LED6.Click += new System.EventHandler(this.btn_switch_click);
+            this.button_LED6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_switch_click);
             // 
             // button_key1
             // 
@@ -371,6 +374,7 @@
             this.button_LED3.UseCompatibleTextRendering = true;
             this.button_LED3.UseVisualStyleBackColor = false;
             this.button_LED3.Click += new System.EventHandler(this.btn_switch_click);
+            this.button_LED3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_switch_click);
             // 
             // button11
             // 
@@ -420,6 +424,7 @@
             this.button_LED2.UseCompatibleTextRendering = true;
             this.button_LED2.UseVisualStyleBackColor = false;
             this.button_LED2.Click += new System.EventHandler(this.btn_switch_click);
+            this.button_LED2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_switch_click);
             // 
             // button_LED1
             // 
@@ -445,6 +450,7 @@
             this.button_LED1.UseCompatibleTextRendering = true;
             this.button_LED1.UseVisualStyleBackColor = false;
             this.button_LED1.Click += new System.EventHandler(this.btn_switch_click);
+            this.button_LED1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_switch_click);
             // 
             // button9
             // 
@@ -492,6 +498,7 @@
             this.button_LED5.UseCompatibleTextRendering = true;
             this.button_LED5.UseVisualStyleBackColor = false;
             this.button_LED5.Click += new System.EventHandler(this.btn_switch_click);
+            this.button_LED5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_switch_click);
             // 
             // button8
             // 

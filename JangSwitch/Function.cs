@@ -388,7 +388,7 @@ namespace JangSwitch
         }
 
         bool [] button_keystate = { true, true, true };
-        private void btn_key_click(object sender, MouseEventArgs e)
+        private void btn_key_click(object sender, EventArgs e)
         {
 
             Button[] btn_key = { button_key1, button_key2, button_key3};
@@ -474,6 +474,5 @@ namespace JangSwitch
         {
             textBox_Debug.Dispose();
         }
-
     }
 }

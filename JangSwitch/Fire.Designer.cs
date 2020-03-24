@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fire));
             this.textBox_Debug = new System.Windows.Forms.TextBox();
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
-            this.button_comLED = new System.Windows.Forms.Button();
             this.button_close2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_closeDebugBox = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button_LED5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button_comLED = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,27 +71,6 @@
             // 
             this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
-            // button_comLED
-            // 
-            this.button_comLED.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button_comLED.CausesValidation = false;
-            this.button_comLED.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button_comLED.FlatAppearance.BorderSize = 0;
-            this.button_comLED.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_comLED.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button_comLED.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button_comLED.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_comLED.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button_comLED.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_comLED.Image = global::JangSwitch.Properties.Resources.led_off;
-            this.button_comLED.Location = new System.Drawing.Point(115, 7);
-            this.button_comLED.Margin = new System.Windows.Forms.Padding(0);
-            this.button_comLED.Name = "button_comLED";
-            this.button_comLED.Size = new System.Drawing.Size(13, 13);
-            this.button_comLED.TabIndex = 2;
-            this.button_comLED.UseVisualStyleBackColor = false;
-            this.button_comLED.Click += new System.EventHandler(this.button_comLED_Click);
-            // 
             // button_close2
             // 
             this.button_close2.CausesValidation = false;
@@ -107,7 +86,7 @@
             this.button_close2.Location = new System.Drawing.Point(136, 2);
             this.button_close2.Margin = new System.Windows.Forms.Padding(0);
             this.button_close2.Name = "button_close2";
-            this.button_close2.Size = new System.Drawing.Size(21, 21);
+            this.button_close2.Size = new System.Drawing.Size(20, 20);
             this.button_close2.TabIndex = 24;
             this.button_close2.UseVisualStyleBackColor = false;
             this.button_close2.Click += new System.EventHandler(this.button_close_Click);
@@ -265,7 +244,7 @@
             this.button_LED7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_LED7.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold);
             this.button_LED7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_LED7.Image = global::JangSwitch.Properties.Resources.btn_orange;
+            this.button_LED7.Image = global::JangSwitch.Properties.Resources.btn_default;
             this.button_LED7.Location = new System.Drawing.Point(20, 283);
             this.button_LED7.Margin = new System.Windows.Forms.Padding(0);
             this.button_LED7.Name = "button_LED7";
@@ -314,7 +293,7 @@
             this.button_LED6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_LED6.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold);
             this.button_LED6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_LED6.Image = global::JangSwitch.Properties.Resources.btn_yellow;
+            this.button_LED6.Image = global::JangSwitch.Properties.Resources.btn_default;
             this.button_LED6.Location = new System.Drawing.Point(86, 284);
             this.button_LED6.Margin = new System.Windows.Forms.Padding(0);
             this.button_LED6.Name = "button_LED6";
@@ -348,7 +327,7 @@
             this.button_key1.Size = new System.Drawing.Size(60, 60);
             this.button_key1.TabIndex = 19;
             this.button_key1.UseVisualStyleBackColor = false;
-            this.button_key1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_key_click);
+            this.button_key1.Click += new System.EventHandler(this.btn_key_click);
             // 
             // button_LED3
             // 
@@ -522,12 +501,33 @@
             this.button8.TabIndex = 15;
             this.button8.UseVisualStyleBackColor = false;
             // 
+            // button_comLED
+            // 
+            this.button_comLED.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_comLED.CausesValidation = false;
+            this.button_comLED.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_comLED.FlatAppearance.BorderSize = 0;
+            this.button_comLED.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_comLED.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_comLED.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_comLED.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_comLED.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button_comLED.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_comLED.Image = global::JangSwitch.Properties.Resources.led_off;
+            this.button_comLED.Location = new System.Drawing.Point(122, 5);
+            this.button_comLED.Margin = new System.Windows.Forms.Padding(0);
+            this.button_comLED.Name = "button_comLED";
+            this.button_comLED.Size = new System.Drawing.Size(13, 13);
+            this.button_comLED.TabIndex = 2;
+            this.button_comLED.UseVisualStyleBackColor = false;
+            this.button_comLED.Click += new System.EventHandler(this.button_comLED_Click);
+            // 
             // Fire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(160, 1084);
+            this.ClientSize = new System.Drawing.Size(160, 1200);
             this.ControlBox = false;
             this.Controls.Add(this.button_close2);
             this.Controls.Add(this.panel1);
@@ -535,7 +535,6 @@
             this.Controls.Add(this.textBox_Debug);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(1920, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(160, 1200);
             this.Name = "Fire";
